@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     container_name: my-go-app
     ports:
-      - "3001:3001"
+      - "8080:8080"
     networks:
       - app-network
     depends_on:
