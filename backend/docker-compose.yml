@@ -13,20 +13,20 @@ services:
     depends_on:
       - postgres-db
     environment:
-      DB_HOST: ${DB_HOST}
-      DB_USER: ${DB_USER}
-      DB_PASSWORD: ${DB_PASSWORD}
-      DB_NAME: ${DB_NAME}
-      DB_PORT: ${DB_PORT}
-      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS}
+      DB_HOST: ip-172-31-24-224
+      DB_USER: admin
+      DB_PASSWORD: admin
+      DB_NAME: postgres-db-admin
+      DB_PORT: 5432
+      ALLOWED_ORIGINS: http://3.95.213.199:3000/employees
 
   postgres-db:
     image: postgres
     container_name: my-postgres-db
     environment:
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: postgres-db-admin
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
     ports:
       - "5432:5432"
     networks:
