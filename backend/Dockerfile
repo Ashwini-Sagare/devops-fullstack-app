@@ -12,6 +12,6 @@ ENV DB_PASSWORD = admin
 ENV DB_NAME = postgres-db-admin
 ENV DB_PORT = 5432
 
-ENV ALLOWED_ORIGINS = http://3.95.213.199:3000/employees
+ENV ALLOWED_ORIGINS = http://3.89.108.220:3000/employees
 
 CMD ["go", "run", "main.go"]
